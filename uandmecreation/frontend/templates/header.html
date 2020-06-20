@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="U&MeCreation &#8211; Event planner &amp;" />
+    <meta name="author" content="https://www.uandmecreations.com/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>U&MeCreation</title>
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="{% static 'images/UandMeCreations.png' %}" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/animate.css' %}" />
+
+    <!-- owl-carousel -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/owl.carousel.css' %}">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/font-awesome.css' %}" />
+
+    <!-- themify -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/themify-icons.css' %} " />
+
+    <!-- flaticon -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/flaticon.css' %}" />
+
+    <!-- REVOLUTION LAYERS STYLES -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+
+    <!-- prettyphoto -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/prettyPhoto.css' %}">
+
+    <!-- shortcodes -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/shortcodes.css' %}" />
+
+    <!-- main -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}" />
+
+    <!-- responsive -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/responsive.css' %}" />
+    <script src=" {% static 'js/jquery.min.js' %}"></script>
+
+</head>
+<style>
+    .active {
+        color: #47bbb0!important;
+    }
+</style>
+
+<body>
+
+    <!--page start-->
+    <div class="page">
+
+        <!-- preloader start -->
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- preloader end -->
+
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-classic">
+            <!--topbar start-->
+            <div class="ttm-topbar-wrapper ttm-bgcolor-skincolor ttm-textcolor-white clearfix">
+                <div class="container">
+                    {% if contactUsDetail %}
+                    <div class="ttm-topbar-content">
+                        <ul class="top-contact text-left">
+                            <li class="list-inline-item"><i class="fa fa-map-marker"></i>{{contactUsDetail.address}}
+                            </li>
+                            <li class="list-inline-item"><strong><i class="fa fa-phone"></i>Call :</strong> {{contactUsDetail.phone_no}}
+                            </li>
+                        </ul>
+                        <div class="topbar-right text-right">
+                            <ul class="top-contact">
+                                <li class="list-inline-item"><strong><i class="fa fa-envelope-o"></i>Email :</strong>
+                                    <a href="mailto:uandmecreation@gmail.com"> {{contactUsDetail.email}}</a>
+                                </li>
+                            </ul>
+                            <a class="ttm-btn btn-inline ttm-btncolor-white ttm-icon-btn-right" href="#">Book Event 
+                                <i class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="ttm-social-links-wrapper list-inline">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-flickr"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="ttm-topbar-content">
+                        <ul class="top-contact text-left">
+                            <li class="list-inline-item"><i class="fa fa-map-marker"></i>206 South Marion Avenue, Indore
+                            </li>
+                            <li class="list-inline-item"><strong><i class="fa fa-phone"></i>Call :</strong> +1 (143) 456-7897
+                            </li>
+                        </ul>
+                        <div class="topbar-right text-right">
+                            <ul class="top-contact">
+                                <li class="list-inline-item"><strong><i class="fa fa-envelope-o"></i>Email :</strong>
+                                    <a href="mailto:uandmecreation@gmail.com"> uandmecreation@gmail.com</a>
+                                </li>
+                            </ul>
+                            <a class="ttm-btn btn-inline ttm-btncolor-white ttm-icon-btn-right" href="#">Book Event 
+                                <i class="fa fa-caret-right"></i>
+                            </a>
+                            <div class="ttm-social-links-wrapper list-inline">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-flickr"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <!--topbar end-->
+            <!-- ttm-header-wrap -->
+            <div id="ttm-header-wrap">
+                <!-- ttm-stickable-header-w -->
+                <div id="ttm-stickable-header-w" class="ttm-stickable-header-w ttm-bgcolor-white clearfix">
+                    <div id="site-header-menu" class="site-header-menu">
+                        <div class="site-header-menu-inner ttm-stickable-header">
+                            <div class="container">
+                                <!-- site-branding -->
+                                <div class="site-branding">
+                                    <a class="home-link" href="index" title="U&MeCreation" rel="home">
+                                        <img id="logo-img" class="img-center" src="{%static 'images/UandMeCreations.png' %}" alt="logo-img">
+                                    </a>
+                                </div>
+                                <!-- site-branding end -->
+                                <!-- header-icins -->
+                                <div class="ttm-header-icons">
+                                    <!-- <span class="ttm-header-icon ttm-header-cart-link">
+                                        <a href="cart.html"><i class="fa fa-shopping-cart"></i>
+                                            <span class="number-cart">0</span>
+                                        </a>
+                                    </span> -->
+                                    <!--   <div class="ttm-header-icon ttm-header-search-link">
+                                        <a href="#" class="open"><i class="ti ti-search"></i></a>
+                                        <div class="ttm-search-overlay">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <form method="get" class="ttm-site-searchform" action="#">
+                                                        <div class="w-search-form-h">
+                                                            <div class="w-search-form-row">
+                                                                <div class="w-search-input">
+                                                                    <input type="search" class="field searchform-s" name="s" placeholder="Type Word Then Enter...">
+                                                                    <button type="submit">
+                                                                        <i class="ti ti-search"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="ttm-search-close"><i class="fa fa-close"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- header-icons end -->
+                                <!--site-navigation -->
+                                <div id="site-navigation" class="site-navigation">
+                                    <div class="ttm-menu-toggle">
+                                        <input type="checkbox" id="menu-toggle-form" />
+                                        <label for="menu-toggle-form" class="ttm-menu-toggle-block">
+                                            <span class="toggle-block toggle-blocks-1"></span>
+                                            <span class="toggle-block toggle-blocks-2"></span>
+                                            <span class="toggle-block toggle-blocks-3"></span>
+                                        </label>
+                                    </div>
+                                    <nav id="menu" class="menu">
+                                        <ul class="dropdown">
+                                            <li id="first"><a href="index">Home</a></li>
+                                            <li><a href="gallery">Gallery</a>
+                                            </li>
+                                            <li><a href="events">Our Events</a></li>
+                                            <li><a href="about-us">About Us</a></li>
+                                            <!--  <li><a href="#">Pages</a>
+                                                <ul>
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="services-1.html">Service</a></li>
+                                                    <li><a href="services-2.html">Service details</a></li>
+                                                    <li><a href="our-event.html">Our Events</a></li>
+                                                    <li><a href="our-team.html">Our Team</a></li>
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                    <li><a href="error.html">Error Page</a></li>
+                                                    <li><a href="faq.html">FAQs</a></li>
+                                                    <li><a href="element.html">Elements</a></li>
+                                                </ul>
+                                            </li> 
+                                             <li><a href="#">Portfolio</a>
+                                                <ul>
+                                                    <li><a href="portfolio-classic.html">Portfolio Classic</a></li>
+                                                    <li><a href="portfolio-overlay.html">Portfolio Overlay</a></li>
+                                                    <li><a href="#">Portfolio Details</a>
+                                                        <ul>
+                                                            <li><a href="portfolio-details-01.html">Style One</a></li>
+                                                            <li><a href="portfolio-details-02.html">Style Two</a></li>
+                                                            <li><a href="portfolio-details-03.html">Style Three</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Blog</a>
+                                                <ul>
+                                                    <li><a href="blog.html">Blog Classic</a></li>
+                                                    <li><a href="blog-grid.html">Blog Grid</a></li>
+                                                    <li><a href="single-blog.html">Single Blog</a></li>
+                                                </ul>
+                                            </li>
+                                           
+                                            <li><a href="#">Shop</a>
+                                                <ul>
+                                                    <li><a href="home-shop.html">Home Shop</a></li>
+                                                    <li><a href="shop.html">Default Shop</a></li>
+                                                    <li><a href="product-details.html">Single Product Details</a></li>
+                                                    <li><a href="cart.html">Cart</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                </ul>
+                                            </li>-->
+                                            <li><a href="contact">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--ttm-header-wrap end -->
+
+                </div>
+            </div>
+            <!-- ttm-header-wrap END -->
+            <!----------------------------------------------------------------------------------------Header End-------------------------------------------------------------------------------------->
+            <script>
+                $(function() {
+                    var current = location.pathname;
+                    $('#menu ul li a').each(function() {
+                        var $this = $(this);
+                        console.log($this);
+                        if (current == "/") {
+                            $('#first').addClass('active');
+                        }
+                        // if the current path is like this link, make it active
+                        else if ($this.attr('href').indexOf(current) !== -1) {
+                            $this.addClass('active');
+                        }
+                    })
+                })
+            </script>
